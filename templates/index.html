@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <title>Breast_Cancer_Detection</title>
+  </head>
+  <body class="bg-nav">
+    
+
+          <nav class="navbar navbar-dark navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand" href="#">Breast Cancer Detection</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">Disabled</a>
+                </li> -->
+              </ul>
+            </div>
+          </nav>
+
+          <div class="container">
+            <div class="row">
+            <div class="col-md-8">
+                <h1 class="text-dark display-4 mt-100" style="font-size:60px">What is Breat Cancer ? </h1>
+                <p>   </p>
+                <!-- lh-base -->
+              <div>
+                <h6 class="text-light" >
+                  <ul >
+
+                    <li >Breast cancer is a disease in which cells in the breast grow out of control.</li>
+                    <li> There are different kinds of breast cancer.</li>
+                    <li> The kind of breast cancer depends on which cells in the breast turn into cancer.</li>
+                    <li> Breast cancer can begin in different parts of the breast.</li>
+                    <li> A breast is made up of three main parts: lobules, ducts, and connective tissue. </li>
+                    <li> lobules are the glands that produce milk. The ducts are tubes that carry milk to the nipple. The connective tissue (which consists of fibrous and fatty tissue) surrounds and holds everything together. Most breast cancers begin in the ducts or lobules.</li>
+                    
+                  </ul>
+                </h6>
+              </div>
+
+              <br/>
+              <br/>
+              <br/>
+              
+              <h4 >
+                <p >The cancer you have can be identified by entering the exact parameter from the x-ray. </p>
+
+              </h4>
+
+              <br/>
+
+              <h3 class="text-dark display-4 " style="font-size:40px">Two main cancers we are looking for:- </h3>
+              <br/>
+              <br/>
+               
+              <img src="static/img/diff.png" class="img-fluid" alt="Responsive image">
+
+
+            </div>
+
+            <!-- form -->
+            <div class="col-md-4" >
+                <div class="card mt-100">
+                    <div class="card-body">
+                        <h3 class="text-center text-primary">Welcome</h3>
+                        <p class="text-center">Let's take a quick checkup</p>
+                  
+
+                    <form class="form" method="POST", action="{{url_for('predict_form')}}">
+                    <label>Mean Radius</label><br>
+                    <input type="mean_radius" name ="mean_radius" class="form-control" required><br>
+
+                    <label>Mean Perimeter</label><br>
+                    <input type="mean_perimeter" name = "mean_perimeter" class="form-control" required><br><br>
+
+                    <label>Mean Area</label><br>
+                    <input type="mean_area" name = "mean_area" class="form-control" required><br><br>
+
+                    <label>Mean Concave Points</label><br>
+                    <input type="mean_concave_points" name = "mean_concave_points" class="form-control" required><br><br>
+
+                    <label>Worst Radius</label><br>
+                    <input type="worst_radius" name = "worst_radius" class="form-control" required><br><br>
+
+                    <label>Worst Perimeter</label><br>
+                    <input type="worst_perimeter" name = "worst_perimeter" class="form-control" required><br><br>
+
+                    <label>Worst Area</label><br>
+                    <input type="worst_area" name = "worst_area" class="form-control" required><br><br>
+
+                    <label>Worst Concave Points</label><br>
+                    <input type="worst_concave_points" name = "worst_concave_points" class="form-control" required><br><br>
+
+                    <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login" >
+                    </form>
+                    <!-- <p>Not a member? <a href="/signup">Create Account</a></p> -->
+            </div>
+            </div>
+        </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
